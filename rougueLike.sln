@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rougueLike", "rougueLike.csproj", "{90D3715C-1E44-8FA0-5FA2-A2A78E777F90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rougueLike.Editor", "rougueLike.Editor.csproj", "{7BB235C8-9461-AAEF-4FC6-592C5F6D47B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90D3715C-1E44-8FA0-5FA2-A2A78E777F90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90D3715C-1E44-8FA0-5FA2-A2A78E777F90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90D3715C-1E44-8FA0-5FA2-A2A78E777F90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90D3715C-1E44-8FA0-5FA2-A2A78E777F90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BB235C8-9461-AAEF-4FC6-592C5F6D47B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BB235C8-9461-AAEF-4FC6-592C5F6D47B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BB235C8-9461-AAEF-4FC6-592C5F6D47B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BB235C8-9461-AAEF-4FC6-592C5F6D47B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
