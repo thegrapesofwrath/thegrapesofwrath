@@ -9,11 +9,14 @@ namespace Completed
         public int playerDamage;                            //The amount of food points to subtract from the player when attacking.
         public AudioClip attackSound1;                      //First of two audio clips to play when attacking the player.
         public AudioClip attackSound2;                      //Second of two audio clips to play when attacking the player.
+        public AudioClip chopSound1;                //1 of 2 audio clips that play when the wall is attacked by the player.
+        public AudioClip chopSound2;                //2 of 2 audio clips that play when the wall is attacked by the player.
 
 
         private Animator animator;                          //Variable of type Animator to store a reference to the enemy's Animator component.
         private Transform target;                           //Transform to attempt to move toward each turn.
         private bool skipMove;                              //Boolean to determine whether or not enemy should skip a turn or move this turn.
+        public int hp = 3;
 
 
         //Start overrides the virtual Start function of the base class.
@@ -75,6 +78,23 @@ namespace Completed
 
             //Call the AttemptMove function and pass in the generic parameter Player, because Enemy is moving and expecting to potentially encounter a Player
             AttemptMove<Player>(xDir, yDir);
+        }
+
+        public void DamageEnemy(int loss)
+        {
+            //Call the RandomizeSfx function of SoundManager to play one of two chop sounds.
+            SoundManager.instance.RandomizeSfx(chopSound1, chopSound2);
+
+            //Set spriteRenderer to the damaged wall sprite.
+            //spriteRenderer.sprite = dmgSprite;
+
+            //Subtract loss from hit point total.
+            hp -= loss;
+
+            //If hit points are less than or equal to zero:
+            if (hp <= 0)
+                //Disable the gameObject.
+                gameObject.SetActive(false);
         }
 
 
