@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thegrapesofwrath", "thegrapesofwrath.csproj", "{749DEDDC-23B3-214D-2682-16CFBA8F9AE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thegrapesofwrath.Editor", "thegrapesofwrath.Editor.csproj", "{52D80142-A8DD-A5B6-D648-F6FF97A60358}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,10 +13,6 @@ Global
 		{749DEDDC-23B3-214D-2682-16CFBA8F9AE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{749DEDDC-23B3-214D-2682-16CFBA8F9AE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{749DEDDC-23B3-214D-2682-16CFBA8F9AE5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{52D80142-A8DD-A5B6-D648-F6FF97A60358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{52D80142-A8DD-A5B6-D648-F6FF97A60358}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{52D80142-A8DD-A5B6-D648-F6FF97A60358}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{52D80142-A8DD-A5B6-D648-F6FF97A60358}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
