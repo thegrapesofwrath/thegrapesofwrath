@@ -119,7 +119,6 @@ A:\Unity\thegrapesofwrath\Temp\UnityVS_bin\Debug\UnityEngine.UIAutomation.xml
 A:\Unity\thegrapesofwrath\Temp\UnityVS_bin\Debug\UnityEngine.GoogleAudioSpatializer.xml
 A:\Unity\thegrapesofwrath\Temp\UnityVS_bin\Debug\UnityEngine.HoloLens.xml
 A:\Unity\thegrapesofwrath\Temp\UnityVS_bin\Debug\UnityEngine.SpatialTracking.xml
-A:\Unity\thegrapesofwrath\Temp\UnityVS_obj\Debug\thegrapesofwrath.csprojAssemblyReference.cache
 A:\Unity\thegrapesofwrath\Temp\UnityVS_obj\Debug\thegrapesofwrath.csproj.CoreCompileInputs.cache
 A:\Unity\thegrapesofwrath\Temp\UnityVS_obj\Debug\thegrapesofwrath.csproj.CopyComplete
 A:\Unity\thegrapesofwrath\Temp\UnityVS_obj\Debug\Assembly-CSharp.dll
