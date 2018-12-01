@@ -1,0 +1,9 @@
+A:\Unity\thegrapesofwrath\Db\Db\obj\Debug\Db.csprojAssemblyReference.cache
+A:\Unity\thegrapesofwrath\Db\Db\obj\Debug\Db.csproj.CoreCompileInputs.cache
+A:\Unity\thegrapesofwrath\Db\Db\bin\Debug\Db.dll
+A:\Unity\thegrapesofwrath\Db\Db\bin\Debug\Db.pdb
+A:\Unity\thegrapesofwrath\Db\Db\obj\Debug\Db.dll
+A:\Unity\thegrapesofwrath\Db\Db\obj\Debug\Db.pdb
+A:\Unity\thegrapesofwrath\Db\Db\bin\Debug\UnityEngine.dll
+A:\Unity\thegrapesofwrath\Db\Db\bin\Debug\UnityEngine.xml
+A:\Unity\thegrapesofwrath\Db\Db\obj\Debug\Db.csproj.CopyComplete
