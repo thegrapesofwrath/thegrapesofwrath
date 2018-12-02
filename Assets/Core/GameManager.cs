@@ -21,6 +21,7 @@ namespace Completed
         private BoardManager boardScript;                       //Store a reference to our BoardManager which will set up the level.
         private int level = 1;                                 //Current level number, expressed in game as "Day 1".
         private List<Enemy> enemies;                            //List of all Enemy units, used to issue them move commands.
+        private List<Bullet> bullets;
         private bool enemiesMoving;                             //Boolean to check if enemies are moving.
         private bool doingSetup = true;                         //Boolean to check if we're setting up board, prevent Player from moving during setup.
 
@@ -46,6 +47,7 @@ namespace Completed
 
             //Assign enemies to a new List of Enemy objects.
             enemies = new List<Enemy>();
+            bullets = new List<Bullet>();
 
             //Get a component reference to the attached BoardManager script
             boardScript = GetComponent<BoardManager>();
@@ -129,6 +131,12 @@ namespace Completed
         {
             //Add Enemy to List enemies.
             enemies.Add(script);
+        }
+
+        public void AddBulletToList(Bullet script)
+        {
+            //Add Enemy to List enemies.
+            bullets.Add(script);
         }
 
 
