@@ -12,7 +12,7 @@ namespace Completed
         public int pointsPerSoda = 20;
         public int wallDamage = 1;
         public int enemyDamage = 2;
-        public Text foodText;
+        public Text grapesText;
         public AudioClip moveSound1;
         public AudioClip moveSound2;
         public AudioClip eatSound1;
@@ -23,7 +23,7 @@ namespace Completed
         public Bullet bullet;
 
         private Animator animator;
-        private int food;
+        private int grapes;
 
 
         //Start overrides the Start function of MovingObject
@@ -32,8 +32,8 @@ namespace Completed
             //Get a component reference to the Player's animator component
             animator = GetComponent<Animator>();
 
-            food = GameManager.instance.playerFoodPoints;
-            foodText.text = "Food: " + food;
+            grapes = GameManager.instance.playerFoodPoints;
+            grapesText.text = "Grapes: " + grapes.ToString();
             base.Start();
         }
 
@@ -42,7 +42,7 @@ namespace Completed
         private void OnDisable()
         {
             //When Player object is disabled, store the current local food total in the GameManager so it can be re-loaded in next level.
-            GameManager.instance.playerFoodPoints = food;
+            GameManager.instance.playerFoodPoints = grapes;
         }
 
 
@@ -59,8 +59,9 @@ namespace Completed
             horizontal = (int)(Input.GetAxisRaw("Horizontal"));
             vertical = (int)(Input.GetAxisRaw("Vertical"));
 
-            fireLeft = (bool)(Input.GetButtonDown("Fire1"));
-            fireRight = (bool)(Input.GetButtonDown("Fire2"));
+            fireLeft = (bool)(Input.GetKeyDown("a"));
+            //fireRight = (bool)(Input.GetButtonDown("d"));
+            fireRight = (bool)(Input.GetKeyDown("d"));
 
             if (horizontal != 0)
             {
@@ -72,8 +73,7 @@ namespace Completed
             {
                 AttemptMove<Wall>(horizontal, vertical);
                 AttemptMove<Enemy>(horizontal, vertical);
-                //Instantiate(bullet, transform.position, Quaternion.identity);
-                food--;
+                grapes--;
             }
 
             if (fireLeft)
@@ -92,7 +92,7 @@ namespace Completed
         //AttemptMove takes a generic parameter T which for Player will be of the type Wall, it also takes integers for x and y direction to move in.
         protected override void AttemptMove<T>(int xDir, int yDir)
         {
-            foodText.text = "Food: " + food;
+            grapesText.text = "Grapes: " + grapes;
 
             base.AttemptMove<T>(xDir, yDir);
 
@@ -145,8 +145,8 @@ namespace Completed
             //Check if the tag of the trigger collided with is Food.
             else if (other.tag == "Food")
             {
-                food += pointsPerFood;
-                foodText.text = "+" + pointsPerFood + " Food: " + food;
+                grapes += pointsPerFood;
+                grapesText.text = "+" + pointsPerFood + " Grapes: " + grapes;
 
                 SoundManager.instance.RandomizeSfx(eatSound1, eatSound2);
 
@@ -156,8 +156,8 @@ namespace Completed
 
             else if (other.tag == "Soda")
             {
-                food += pointsPerSoda;
-                foodText.text = "+" + pointsPerSoda + " Food: " + food;
+                grapes += pointsPerSoda;
+                grapesText.text = "+" + pointsPerSoda + " Grapes: " + grapes;
 
                 SoundManager.instance.RandomizeSfx(drinkSound1, drinkSound2);
                 other.gameObject.SetActive(false);
@@ -179,13 +179,13 @@ namespace Completed
             //Set the trigger for the player animator to transition to the playerHit animation.
             animator.SetTrigger("playerHit");
 
-            food -= loss;
-            foodText.text = "-" + loss + " Food: " + food;
+            grapes -= loss;
+            grapesText.text = "-" + loss + " Grapes: " + grapes;
             CheckIfGameOver();
         }
         private void CheckIfGameOver()
         {
-            if (food <= 0)
+            if (grapes <= 0)
             {
                 SoundManager.instance.PlaySingle(gameOverSound);
                 SoundManager.instance.musicSource.Stop();

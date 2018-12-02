@@ -227,6 +227,7 @@
     <Compile Include="Assets\Core\SoundManager.cs" />
     <Compile Include="Assets\Players\Enemy.cs" />
     <Compile Include="Assets\Players\Player.cs" />
+    <Compile Include="Assets\Weapons\Bullet.cs" />
     <Compile Include="Assets\World\Wall.cs" />
   </ItemGroup>
   <ItemGroup>
