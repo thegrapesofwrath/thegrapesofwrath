@@ -199,6 +199,10 @@ namespace Completed
         {
             //Load the last scene loaded, in this case Main, the only scene in the game. And we load it in "Single" mode so it replace the existing one
             //and not load all the scene object in the current scene.
+            if (SoundManager.instance.musicSource.isPlaying == false)
+            {
+                SoundManager.instance.musicSource.Play();
+            }
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
         }
 
@@ -226,11 +230,15 @@ namespace Completed
             {
                 animator.SetTrigger("lowHealth");
             }
-            if (grapes <= 0)
+            if (grapes == 0)
             {
-                SoundManager.instance.PlaySingle(gameOverSound);
                 SoundManager.instance.musicSource.Stop();
-                GameManager.instance.GameOver();
+                enabled = false;
+                GameManager.instance.youDied.SetActive(true);
+                SoundManager.instance.PlaySingle(gameOverSound);
+                GameManager.instance.level = 0;
+                GameManager.instance.playerFoodPoints = 250;
+                Invoke("Restart", 5);
             }
         }
     }

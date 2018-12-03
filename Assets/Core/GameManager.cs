@@ -18,10 +18,10 @@ namespace Completed
 
         private Text levelText;                                 //Text to display current level number.
         private GameObject levelImage;                          //Image to block out level as levels are being set up, background for levelText.
-        private GameObject youDied;
+        public GameObject youDied;
         private GameObject titleCard;
         private BoardManager boardScript;                       //Store a reference to our BoardManager which will set up the level.
-        private int level = 1;                                 //Current level number, expressed in game as "Day 1".
+        public int level = 1;                                 //Current level number, expressed in game as "Day 1".
         private List<Enemy> enemies;                            //List of all Enemy units, used to issue them move commands
         private bool enemiesMoving;                             //Boolean to check if enemies are moving.
         private bool doingSetup = true;                         //Boolean to check if we're setting up board, prevent Player from moving during setup.
@@ -122,7 +122,6 @@ namespace Completed
         //Update is called every frame.
         void Update()
         {
-
             //Check that playersTurn or enemiesMoving or doingSetup are not currently true.
             if (playersTurn || enemiesMoving || doingSetup)
 
@@ -149,8 +148,7 @@ namespace Completed
             youDied.SetActive(true);
 
             //Disable this GameManager.
-            enabled = false;
-            //Awake();
+            //enabled = false;
         }
 
         //Coroutine to move enemies in sequence.
