@@ -216,15 +216,15 @@ namespace Completed
         {
             if (grapes > 80)
             {
-                animator.SetTrigger("PlayerIdle");
+                animator.SetTrigger("playerIdle");
             }
             if (grapes <= 80 && grapes >= 40)
             {
-                animator.SetTrigger("HalfHealth");
+                animator.SetTrigger("halfHealth");
             }
             if (grapes < 40)
             {
-                animator.SetTrigger("LowHealth");
+                animator.SetTrigger("lowHealth");
             }
             if (grapes <= 0)
             {

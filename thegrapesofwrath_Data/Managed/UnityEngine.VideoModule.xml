@@ -4,6 +4,62 @@
     <assembly>
       <name>UnityEngine.VideoModule</name>
     </assembly>
+    <member name="T:UnityEngine.Experimental.Video.VideoClipPlayable">
+      <summary>
+        <para>An implementation of IPlayable that controls playback of a VideoClip.</para>
+      </summary>
+    </member>
+    <member name="M:UnityEngine.Experimental.Video.VideoClipPlayable.Create(UnityEngine.Playables.PlayableGraph,UnityEngine.Video.VideoClip,System.Boolean)">
+      <summary>
+        <para>Creates a VideoClipPlayable in the PlayableGraph.</para>
+      </summary>
+      <param name="graph">The PlayableGraph object that will own the VideoClipPlayable.</param>
+      <param name="looping">Indicates if VideoClip loops when it reaches the end.</param>
+      <param name="clip">VideoClip used to produce textures in the PlayableGraph.</param>
+      <returns>
+        <para>A VideoClipPlayable linked to the PlayableGraph.</para>
+      </returns>
+    </member>
+    <member name="T:UnityEngine.Experimental.Video.VideoPlayerExtensions">
+      <summary>
+        <para>Extension methods for the Video.VideoPlayer class.</para>
+      </summary>
+    </member>
+    <member name="M:UnityEngine.Experimental.Video.VideoPlayerExtensions.GetAudioSampleProvider(UnityEngine.Video.VideoPlayer,System.UInt16)">
+      <summary>
+        <para>Return the Experimental.Audio.AudioSampleProvider for the specified track, used to receive audio samples during playback.</para>
+      </summary>
+      <param name="vp">The "this" pointer for the extension method.</param>
+      <param name="trackIndex">The audio track index for which the sample provider is queried.</param>
+      <returns>
+        <para>The sample provider for the specified track.</para>
+      </returns>
+    </member>
+    <member name="A:UnityEngine.VideoModule">
+      <summary>
+        <para>The Video module lets you play back video files in your content.</para>
+      </summary>
+    </member>
+    <member name="T:UnityEngine.Video.Video3DLayout">
+      <summary>
+        <para>Types of 3D content layout within a video.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEngine.Video.Video3DLayout.No3D">
+      <summary>
+        <para>Video does not have any 3D content.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEngine.Video.Video3DLayout.OverUnder3D">
+      <summary>
+        <para>Video contains 3D content where the left eye occupies the upper half and right eye occupies the lower half of video frames.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEngine.Video.Video3DLayout.SideBySide3D">
+      <summary>
+        <para>Video contains 3D content where the left eye occupies the left half and right eye occupies the right half of video frames.</para>
+      </summary>
+    </member>
     <member name="T:UnityEngine.Video.VideoAspectRatio">
       <summary>
         <para>Methods used to fit a video in the target area.</para>
@@ -42,6 +98,11 @@
     <member name="T:UnityEngine.Video.VideoAudioOutputMode">
       <summary>
         <para>Places where the audio embedded in a video can be sent.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEngine.Video.VideoAudioOutputMode.APIOnly">
+      <summary>
+        <para>Send the embedded audio to the associated AudioSampleProvider.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.Video.VideoAudioOutputMode.AudioSource">
@@ -317,7 +378,12 @@ The actual number of audio tracks cannot be known in advance when playing URLs, 
     </member>
     <member name="P:UnityEngine.Video.VideoPlayer.targetCamera">
       <summary>
-        <para>Camera component to draw to when Video.VideoPlayer.renderMode is set to either Video.VideoTarget.CameraFarPlane or Video.VideoTarget.CameraNearPlane.</para>
+        <para>Camera component to draw to when Video.VideoPlayer.renderMode is set to either Video.VideoRenderMode.CameraFarPlane or Video.VideoRenderMode.CameraNearPlane.</para>
+      </summary>
+    </member>
+    <member name="P:UnityEngine.Video.VideoPlayer.targetCamera3DLayout">
+      <summary>
+        <para>Type of 3D content contained in the source video media.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.Video.VideoPlayer.targetCameraAlpha">
@@ -337,7 +403,7 @@ The actual number of audio tracks cannot be known in advance when playing URLs, 
     </member>
     <member name="P:UnityEngine.Video.VideoPlayer.targetTexture">
       <summary>
-        <para>RenderTexture to draw to when Video.VideoPlayer.renderMode is set to Video.VideoTarget.RenderTexture. For optimal performance, the dimensions of the RenderTexture should match those of the video media exactly.</para>
+        <para>RenderTexture to draw to when Video.VideoPlayer.renderMode is set to Video.VideoTarget.RenderTexture.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.Video.VideoPlayer.texture">
