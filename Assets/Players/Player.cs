@@ -81,24 +81,36 @@ namespace Completed
 
             if (fireLeft)
             {
+                grapes--;
+                grapesText.text = "Grapes: " + grapes;
+                CheckIfGameOver();
                 bullet.velY = 0;
                 bullet.velX = -5;
                 Instantiate(bullet, transform.position, Quaternion.identity);
             }
             if (fireRight)
             {
+                grapes--;
+                grapesText.text = "Grapes: " + grapes;
+                CheckIfGameOver();
                 bullet.velX = 5;
                 bullet.velY = 0;
                 Instantiate(bullet, transform.position, Quaternion.identity);
             }
             if (fireUp)
             {
+                grapes--;
+                grapesText.text = "Grapes: " + grapes;
+                CheckIfGameOver();
                 bullet.velX = 0;
                 bullet.velY = 5;
                 Instantiate(bullet, transform.position, Quaternion.identity);
             }
             if (fireDown)
             {
+                grapes--;
+                grapesText.text = "Grapes: " + grapes;
+                CheckIfGameOver();
                 bullet.velX = 0;
                 bullet.velY = -5;
                 Instantiate(bullet, transform.position, Quaternion.identity);
