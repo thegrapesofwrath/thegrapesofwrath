@@ -122,6 +122,7 @@ namespace Completed
         //Update is called every frame.
         void Update()
         {
+
             //Check that playersTurn or enemiesMoving or doingSetup are not currently true.
             if (playersTurn || enemiesMoving || doingSetup)
 
@@ -149,6 +150,7 @@ namespace Completed
 
             //Disable this GameManager.
             enabled = false;
+            //Awake();
         }
 
         //Coroutine to move enemies in sequence.

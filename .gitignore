@@ -1,4 +1,3 @@
 db.lock
 UnityLockfile
-*.dll
 ./.vs
