@@ -77,7 +77,48 @@ namespace Completed
 
                     //Check if we current position is at board edge, if so choose a random outer wall prefab from our array of outer wall tiles.
                     if (x == -1 || x == columns || y == -1 || y == rows)
-                        toInstantiate = outerWallTiles[Random.Range(0, outerWallTiles.Length)];
+                    {
+                        if (x == -1)
+                        {
+                            if (y == -1)
+                            {
+                                toInstantiate = outerWallTiles[7];
+                            }
+                            else if (y == rows)
+                            {
+                                toInstantiate = outerWallTiles[4];
+                            }
+                            else
+                            {
+                                toInstantiate = outerWallTiles[1];
+                            }
+
+                        }
+                        else if (x == columns)
+                        {
+                            if (y == -1)
+                            {
+                                toInstantiate = outerWallTiles[6];
+                            }
+                            else if (y == rows)
+                            {
+                                toInstantiate = outerWallTiles[5];
+                            }
+                            else
+                            {
+                                toInstantiate = outerWallTiles[0];
+                            }
+                        }
+                        else if (y == -1 && x != -1 && x != columns)
+                        {
+                            toInstantiate = outerWallTiles[3];
+                        }
+                        else if (y == rows && x != -1 && x != columns)
+                        {
+                            toInstantiate = outerWallTiles[2];
+                        }
+                    }
+
 
                     //Instantiate the GameObject instance using the prefab chosen for toInstantiate at the Vector3 corresponding to current grid position in loop, cast it to GameObject.
                     GameObject instance =
