@@ -54,17 +54,14 @@ namespace Completed
             int vertical = 0;
             bool fireLeft = false;
             bool fireRight = false;
-            bool fireUp = false;
-            bool fireDown = false;
 
             //Get input from the input manager, round it to an integer and store in horizontal to set x axis move direction
             horizontal = (int)(Input.GetAxisRaw("Horizontal"));
             vertical = (int)(Input.GetAxisRaw("Vertical"));
 
             fireLeft = (bool)(Input.GetKeyDown("a"));
+            //fireRight = (bool)(Input.GetButtonDown("d"));
             fireRight = (bool)(Input.GetKeyDown("d"));
-            fireUp = (bool)(Input.GetKeyDown("w"));
-            fireDown = (bool)(Input.GetKeyDown("s"));
 
             if (horizontal != 0)
             {
@@ -81,38 +78,12 @@ namespace Completed
 
             if (fireLeft)
             {
-                grapes--;
-                grapesText.text = "Grapes: " + grapes;
-                CheckIfGameOver();
-                bullet.velY = 0;
-                bullet.velX = -5;
                 Instantiate(bullet, transform.position, Quaternion.identity);
+                bullet.velX = -5;
             }
             if (fireRight)
             {
-                grapes--;
-                grapesText.text = "Grapes: " + grapes;
-                CheckIfGameOver();
                 bullet.velX = 5;
-                bullet.velY = 0;
-                Instantiate(bullet, transform.position, Quaternion.identity);
-            }
-            if (fireUp)
-            {
-                grapes--;
-                grapesText.text = "Grapes: " + grapes;
-                CheckIfGameOver();
-                bullet.velX = 0;
-                bullet.velY = 5;
-                Instantiate(bullet, transform.position, Quaternion.identity);
-            }
-            if (fireDown)
-            {
-                grapes--;
-                grapesText.text = "Grapes: " + grapes;
-                CheckIfGameOver();
-                bullet.velX = 0;
-                bullet.velY = -5;
                 Instantiate(bullet, transform.position, Quaternion.identity);
             }
         }
