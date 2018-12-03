@@ -214,6 +214,18 @@ namespace Completed
         }
         private void CheckIfGameOver()
         {
+            if (grapes > 80)
+            {
+                animator.SetTrigger("PlayerIdle");
+            }
+            if (grapes <= 80 && grapes >= 40)
+            {
+                animator.SetTrigger("HalfHealth");
+            }
+            if (grapes < 40)
+            {
+                animator.SetTrigger("LowHealth");
+            }
             if (grapes <= 0)
             {
                 SoundManager.instance.PlaySingle(gameOverSound);
