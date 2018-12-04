@@ -1,2 +1,4 @@
 # thegrapesofwrath
 Grape Game !!!
+
+A bunch of grapes was on their way home when they encountered some pigeons. They fought by hurling pieces of its body at the pigeons. In fiery grape explosions the pigeons blew apart into little bird bits leaving feathers strewn about a beautiful vineyard that had been belonged to a bunch of grape’s great grape grandfather. A bunch of grapes fought for as long as he could. Finally after a weary battle a bunch of grapes succumbed for he was nothing more than a stem. As a flock of feisty pecking pigeons closed around him a bunch of grapes could hear his family being pecked to death. Then Pecker the leader of the pigeons came to a bunch of grapes. He said “Looks like it going to be a Grape Day!”. Then he pecked a bunch of grapes to death. But all was not lost. A bunch of grapes woke up in hell and discovered he could regain life be eating the grape souls of his ancestors. Will he be able to eat enough souls to undie?
